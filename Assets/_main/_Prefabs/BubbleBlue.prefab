@@ -93,7 +93,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5900569096656979074}
-  m_Material: {fileID: 13400000, guid: 4a375819bc1cc2345a3ffb4fd867d0a7, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -146,8 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fbd753cee61efe4cb3571aa84b26b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upSpeed: 0.3
+  upSpeed: 0.45
   zigzagSpeed: 0.88
   zigzagAmplitude: 0.56
   color_ID: 0
   force: 4
+  wrapOffset: 0.1

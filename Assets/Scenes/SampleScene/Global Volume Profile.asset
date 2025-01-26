@@ -90,7 +90,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: -0.39
+    m_Value: -0.3
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -137,10 +137,10 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: 0.47
+    m_Value: -0.61
   contrast:
     m_OverrideState: 1
-    m_Value: 35
+    m_Value: 39
   colorFilter:
     m_OverrideState: 1
     m_Value: {r: 0.70692414, g: 0.8867924, b: 0.7192345, a: 1}

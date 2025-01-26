@@ -62,4 +62,13 @@ public class BubbleMovement : MonoBehaviour
         // Update the bubble's position
         transform.position = position;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Dead"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

@@ -38,9 +38,9 @@ public class PointsUI : MonoBehaviour
         if (PointsManager.Instance != null)
         {
             // Update text for each color's points
-            redPointsText.text = $"Blue Points: {PointsManager.Instance.redPoints}";
-            bluePointsText.text = $"Red Points: {PointsManager.Instance.bluePoints}";
-            greenPointsText.text = $"Green Points: {PointsManager.Instance.greenPoints}";
+            redPointsText.text = PointsManager.Instance.redPoints.ToString();
+            bluePointsText.text = PointsManager.Instance.bluePoints.ToString();
+            greenPointsText.text = PointsManager.Instance.greenPoints.ToString();
         }
     }
 }

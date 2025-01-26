@@ -296,7 +296,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: e46c777834b8d70488b0c2a1ece5cc46, type: 3}
+  - {fileID: 2100000, guid: f67a67287c9b5d04086662d59ee1ca6c, type: 2}
   - {fileID: -3846018093981099296, guid: e46c777834b8d70488b0c2a1ece5cc46, type: 3}
   - {fileID: -6478536213147159724, guid: e46c777834b8d70488b0c2a1ece5cc46, type: 3}
   m_StaticBatchInfo:
@@ -332,9 +332,10 @@ GameObject:
   - component: {fileID: 7646395799793548635}
   - component: {fileID: 4695071804689171283}
   - component: {fileID: 8158425906134478220}
+  - component: {fileID: 2924024806571093973}
   m_Layer: 0
   m_Name: Submarine
-  m_TagString: Untagged
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,12 +373,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   rotationSpeed: 200
-  explosionForce: 10
-  explosionRadius: 1.5
-  upwardModifier: 0.5
-  explosionLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!54 &4695071804689171283
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -428,3 +423,16 @@ CapsuleCollider:
   m_Height: 6.1723638
   m_Direction: 2
   m_Center: {x: 0.010620503, y: 0.020000001, z: 0.4810703}
+--- !u!114 &2924024806571093973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6815933672894722142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d9cd02dbee2ef83b214d7352100321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrapOffset: 1
