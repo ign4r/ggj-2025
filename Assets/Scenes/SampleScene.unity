@@ -3771,11 +3771,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646395799793548635, guid: 95bebddd853de5c43a0365779543e9b7, type: 3}
       propertyPath: pushForce
-      value: 2
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 7646395799793548635, guid: 95bebddd853de5c43a0365779543e9b7, type: 3}
       propertyPath: explosionForce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646395799793548635, guid: 95bebddd853de5c43a0365779543e9b7, type: 3}
+      propertyPath: upwardModifier
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7646395799793548635, guid: 95bebddd853de5c43a0365779543e9b7, type: 3}
       propertyPath: explosionRadius
