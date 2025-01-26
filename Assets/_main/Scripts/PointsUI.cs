@@ -3,22 +3,44 @@ using UnityEngine.UI;
 
 public class PointsUI : MonoBehaviour
 {
-    public Text pointsText; // Reference to the UI Text component
-    public PointsManager pointsManager;
+    public Text redPointsText; // Reference to the UI Text component for red points
+    public Text bluePointsText; // Reference to the UI Text component for blue points
+    public Text greenPointsText; // Reference to the UI Text component for green points
 
     private void Start()
     {
-        pointsManager = FindObjectOfType<PointsManager>();
-        UpdatePointsUI();
+        // Ensure the PointsManager Singleton is available
+        if (PointsManager.Instance == null)
+        {
+            Debug.LogError("PointsManager Singleton not found!");
+        }
+        else
+        {
+            UpdatePointsUI(); // Update points on UI at the start
+        }
     }
 
     private void Update()
     {
-        UpdatePointsUI();
+        // Always check if the Singleton exists before updating points
+        if (PointsManager.Instance != null)
+        {
+            UpdatePointsUI();
+        }
+        else
+        {
+            Debug.LogError("PointsManager is not assigned.");
+        }
     }
 
     private void UpdatePointsUI()
     {
-        pointsText.text = $"Points: {pointsManager.currentPoints}";
+        if (PointsManager.Instance != null)
+        {
+            // Update text for each color's points
+            redPointsText.text = $"Blue Points: {PointsManager.Instance.redPoints}";
+            bluePointsText.text = $"Red Points: {PointsManager.Instance.bluePoints}";
+            greenPointsText.text = $"Green Points: {PointsManager.Instance.greenPoints}";
+        }
     }
 }
