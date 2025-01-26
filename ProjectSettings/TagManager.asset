@@ -8,6 +8,7 @@ TagManager:
   - Red
   - Bubble
   - Wall
+  - Boat
   layers:
   - Default
   - TransparentFX

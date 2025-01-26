@@ -115,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5900569096656979074}
   serializedVersion: 4
-  m_Mass: 2
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -150,3 +150,4 @@ MonoBehaviour:
   zigzagSpeed: 0.88
   zigzagAmplitude: 0.56
   color_ID: 0
+  force: 4
