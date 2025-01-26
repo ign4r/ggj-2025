@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class CubeCollision : MonoBehaviour
 {
-    public int ID_receptor;
+    public int ID_receptor; // The receptor's color ID
     public GameObject explosionEffect; // Reference to your explosion prefab
     public Color explosionColor = Color.white; // Default explosion color
-
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,15 +16,24 @@ public class CubeCollision : MonoBehaviour
             {
                 TriggerExplosion(other.transform.position);
                 print("ACERTASTE BITCH");
+
+                // Call the AddPoints method to increase points for the corresponding color
+                if (PointsManager.Instance != null) // Check if the Singleton is properly assigned
+                {
+                    PointsManager.Instance.AddPoints(bubble.color_ID); // Pass the bubble's color ID
+                }
+                else
+                {
+                    Debug.LogWarning("PointsManager Singleton is not assigned.");
+                }
             }
             else
             {
-
                 Destroy(bubble.gameObject);
-
             }
         }
     }
+
     private void TriggerExplosion(Vector3 position)
     {
         // Instantiate the explosion effect at the bubble's position
