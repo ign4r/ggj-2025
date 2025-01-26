@@ -71,4 +71,13 @@ public class BubbleMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print(other.gameObject.name);
+        if (other.gameObject.CompareTag("Dead"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
