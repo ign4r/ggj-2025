@@ -35,9 +35,8 @@ public class CountdownTimer : MonoBehaviour
         if (timerText != null)
         {
             // Display as MM:SS format
-            int minutes = Mathf.FloorToInt(currentTime / 60);
-            int seconds = Mathf.FloorToInt(currentTime % 60);
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+            int seconds = Mathf.FloorToInt(currentTime);
+            timerText.text = seconds.ToString();
         }
     }
 
