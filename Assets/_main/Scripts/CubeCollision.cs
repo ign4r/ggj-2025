@@ -6,28 +6,27 @@ public class CubeCollision : MonoBehaviour
     public GameObject explosionEffect; // Reference to your explosion prefab
     public Color explosionColor = Color.white; // Default explosion color
 
-    private void OnCollisionEnter(Collision collision)
+
+
+    private void OnTriggerEnter(Collider other)
     {
         // Check if the collided object has the BubbleMovement script attached
-        var bubble = collision.gameObject.GetComponent<BubbleMovement>();
+        var bubble = other.gameObject.GetComponent<BubbleMovement>();
         if (bubble != null)
         {
             if (bubble.color_ID == ID_receptor)
             {
+                TriggerExplosion(other.transform.position);
                 print("ACERTASTE BITCH");
             }
             else
             {
-                // Trigger explosion
-                TriggerExplosion(collision.transform.position);
 
-                // Destroy the bubble
                 Destroy(bubble.gameObject);
-                print("SOS UN FRACA");
+
             }
         }
     }
-
     private void TriggerExplosion(Vector3 position)
     {
         // Instantiate the explosion effect at the bubble's position
